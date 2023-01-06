@@ -1,7 +1,15 @@
 .App {
   text-align: center;
 }
-
+.qwa{
+  color: red;
+}
+button{
+  color: red;
+}
+#btn{
+  border-color: red;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -4,8 +4,10 @@ import {Context} from "./index";
 import {observer} from "mobx-react-lite";
 import {IUser} from "./models/IUser";
 import UserService from "./services/UserService";
+import * as css from './App'
 
 const App: FC = () => {
+    
     const {store} = useContext(Context);
     const [users, setUsers] = useState<IUser[]>([]);
 
@@ -39,6 +41,8 @@ const App: FC = () => {
 
     return (
         <div>
+            
+
             <h1>{store.isAuth ? `Пользователь авторизован ${store.user.email}` : 'АВТОРИЗУЙТЕСЬ'}</h1>
             <h1>{store.user.isActivated ? 'Аккаунт подтвержден по почте' : 'ПОДТВЕРДИТЕ АККАУНТ!!!!'}</h1>
             <button onClick={() => store.logout()}>Выйти</button>

@@ -21,7 +21,7 @@ const LoginForm: FC = () => {
                 type="password"
                 placeholder='Пароль'
             />
-            <button onClick={() => store.login(email, password)}>
+            <button id='btn' onClick={() => store.login(email, password)}>
                 Логин
             </button>
             <button onClick={() => store.registration(email, password)}>
